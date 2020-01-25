@@ -2,7 +2,8 @@
 <?php 
 $kategorie = get_the_category($post->ID);
 $kategorie = $kategorie[0];
-$name_der_kategorie = $kategorie->name;?>
+$name_der_kategorie = $kategorie->name;
+$name_der_kategorie = strtolower($name_der_kategorie);?>
 
 	<nav id="secondary-nav" class="main-navigation" role="navigation">
 		<div class="container">
