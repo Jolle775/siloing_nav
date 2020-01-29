@@ -3,7 +3,7 @@
 $kategorie = get_the_category($post->ID);
 $kategorie = $kategorie[0];
 $name_der_kategorie = $kategorie->name;
-$name_der_kategorie = strtolower($name_der_kategorie);?>
+$name_der_kategorie_klein = strtolower($name_der_kategorie);?>
 
 	<nav id="secondary-nav" class="main-navigation" role="navigation">
 		<div class="container">
@@ -12,9 +12,8 @@ $name_der_kategorie = strtolower($name_der_kategorie);?>
 				<ul id="secondary-menu" class="sf-menu col-md-9 l_tinynav1 sf-js-enabled sf-arrows">
 	<?php if ( is_single()) : ?>	
 					
-	<li id="menu-item-710" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-710" data-children-count="0"><a href="https://360kompakt.de" data-wpel-link="internal" target="_self" title="360Kompakt">Startseite 360Kompakt</a></li>
-	
-	<li id="menu-item-711" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-711" data-children-count="0"><a href="https://360kompakt.de/<?php echo $name_der_kategorie; ?>" data-wpel-link="internal" target="_self" title="<?php echo $name_der_kategorie; ?>">Weitere Artikel zum Thema <?php echo $name_der_kategorie; ?></a></li>
+	<li id="menu-item-710" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-710" data-children-count="0"><a href="https://360kompakt.de" data-wpel-link="internal" target="_self" title="360Kompakt">Zur Startseite</a></li>
+					<li id="menu-item-709" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-709" data-children-count="0"><a href="https://360kompakt.de/<?php echo $name_der_kategorie_klein; ?>" data-wpel-link="internal" target="_self" title="<?php echo $name_der_kategorie; ?>">Weitere Artikel zum Thema <?php echo $name_der_kategorie; ?></a></li>
 					
 	<?php else : ?>
 	<li id="menu-item-712" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-712" data-children-count="0"><a href="https://360kompakt.de/finanzen" data-wpel-link="internal" target="_self" title="Finanzen">Finanzen</a></li>
